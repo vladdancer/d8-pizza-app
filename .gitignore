@@ -23,4 +23,5 @@
 # Ignore .env files as they are personal
 /.env
 
-node_modules
+/web/spa/node_modules
+/web/spa/build
