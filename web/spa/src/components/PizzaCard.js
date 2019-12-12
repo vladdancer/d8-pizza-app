@@ -1,13 +1,15 @@
 import React from 'react';
 import {Button, Card, Image} from "semantic-ui-react";
 
-const PizzaCard = () => (
+
+
+const PizzaCard = (props) => (
   <Card>
-    <Image src='/images/avatar/large/matthew.png' wrapped ui={false} />
+    <Image src='https://pizzarini.info/wp-content/uploads/2018/06/Pizza-Margarita.jpg' wrapped ui={false} />
     <Card.Content>
-      <Card.Header>Pizza name</Card.Header>
+      <Card.Header>{ props.header }</Card.Header>
       <Card.Description>
-        Pizza description
+        {props.description}
       </Card.Description>
     </Card.Content>
     <Card.Content extra>
@@ -15,9 +17,7 @@ const PizzaCard = () => (
         <Button basic color='green'>
           Buy
         </Button>
-        <Button basic color='red'>
-          More info
-        </Button>
+        
       </div>
     </Card.Content>
   </Card>
