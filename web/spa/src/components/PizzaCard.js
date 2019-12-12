@@ -1,13 +1,13 @@
 import React from 'react';
 import {Button, Card, Image} from "semantic-ui-react";
 
-const PizzaCard = () => (
+const PizzaCard = (props) => (
   <Card>
-    <Image src='/images/avatar/large/matthew.png' wrapped ui={false} />
+    <Image src={props.imges} wrapped ui={true} />
     <Card.Content>
-      <Card.Header>Pizza name</Card.Header>
+      <Card.Header>Pizza {props.pizzaname}</Card.Header>
       <Card.Description>
-        Pizza description
+        {props.description}
       </Card.Description>
     </Card.Content>
     <Card.Content extra>
@@ -22,5 +22,4 @@ const PizzaCard = () => (
     </Card.Content>
   </Card>
 )
-
 export default PizzaCard
